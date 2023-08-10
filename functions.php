@@ -78,7 +78,8 @@
   add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
 
     function university_files(){
-        wp_enqueue_script('googleMap', '//maps.googleapis.com/maps/api/js?key=AIzaSyAgfGmYt26TtcfS5EmxiuGamF0fYVVP4UA', NULL, '1.0', true );
+        wp_enqueue_script('config', get_theme_file_uri('/config.js'), NULL, '1.0', true );
+        wp_enqueue_script('googleMap', '//maps.googleapis.com/maps/api/js?key=YOURAPIKEYHERE', NULL, '1.0', true );
         wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true );
         wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
         wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css');
